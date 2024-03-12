@@ -29,13 +29,11 @@
                 </div>
 
                 <div class="thumbs">
-                    <div @click="prev" class="prev"></div>
-                    <div @click="next" class="next"></div>
-
-
+                    <div @click="prev()" class="prev"></div>
+                    <div @click="next()" class="next"></div>
 
                     <div class="thumb">
-                        <img :src="thumbResp" alt="" v-for="thumbResp in slides[activeImage].image">
+                    <img src="./assets/img/01.webp" alt="" v-for="thumb in slides.lenght">
                     </div>
                    
                     <!-- <div class="thumb">
@@ -47,7 +45,7 @@
                     <div class="thumb">
                         <img src="./assets/img/04.webp" alt="Stray" />
                     </div>
-                    <div class="thumb">
+                    <div class="thumb"> 
                         <img src="./assets/img/05.webp" alt="Avengers" />
                     </div> -->
                 </div>

@@ -5,7 +5,7 @@ createApp({
         return {
 
             activeImage: 0,
-            
+            index: 0,
 
             slides: [
                 {
@@ -50,15 +50,20 @@ createApp({
     methods: {
         
         prev() {
-
-            //activeImage--
-            console.log("prev")
-            console.log(this.slides[0].image);
+            this.activeImage--  
+            //console.log(this.activeImage)
+            //console.log(this.slides[0].image);
+            if (this.activeImage < 0) {
+                this.activeImage = this.slides.length - 1;
+            }
+           
         },
         next() {
-
-            //activeImage++
-            console.log("next")
+            this.activeImage++
+            //console.log(this.activeImage)
+            if (this.activeImage === this.slides.length) {
+                this.activeImage = 0;
+            }
         }
 
 
