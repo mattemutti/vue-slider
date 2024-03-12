@@ -33,7 +33,7 @@
                     <div @click="next()" class="next"></div>
 
                     <div class="thumb">
-                    <img src="./assets/img/01.webp" alt="" v-for="thumb in slides.lenght">
+                    <img :src="thumb" alt="" v-for="(thumb, index) in slides[index].image" @click="activeImage = index">
                     </div>
                    
                     <!-- <div class="thumb">
